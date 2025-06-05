@@ -40,8 +40,8 @@ export class EmpAddEditComponent implements OnInit {
     if (this.empForm.valid) {
       if (this.data) {
         this._empService
-          .updateEmployee(this.data.id, this.empForm.value)
-          .subscribe({
+        .updateEmployee(this.data.id, this.empForm.value)
+        .subscribe({
             next: (val: any) => {
               this._coreService.openSnackBar('User detail updated!');
               this._dialogRef.close(true);
