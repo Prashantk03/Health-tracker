@@ -8,11 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class EmployeeService {
   private baseUrl = environment.apiUrl;
-  
+
   constructor(private _http: HttpClient) {}
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/employees', data);
+    return this._http.post(`${environment.apiUrl}/users`, data);
   }
 
   updateEmployee(id: number, data: any): Observable<any> {
