@@ -10,14 +10,6 @@
       "id": "1"
     },
     {
-      "id": "159e",
-      "userName": "Nikita",
-      "workoutType": [
-        "Cycling"
-      ],
-      "workoutMinutes": "89"
-    },
-    {
       "userName": "Priya",
       "workoutType": [
         "Zumba"
@@ -48,6 +40,39 @@
         "Cycling"
       ],
       "workoutMinutes": "30"
+    },
+    {
+      "id": "5877",
+      "userName": "anas",
+      "workoutType": [
+        "Cardio"
+      ],
+      "workoutMinutes": "15"
+    },
+    {
+      "id": "34a4",
+      "userName": "sahil",
+      "workoutType": [
+        "Cardio"
+      ],
+      "workoutMinutes": "15"
+    },
+    {
+      "id": "fd52",
+      "userName": "Prashant",
+      "workoutType": [
+        "Cycling"
+      ],
+      "workoutMinutes": "30"
+    },
+    {
+      "id": "f78d",
+      "userName": "Vansh ",
+      "workoutType": [
+        "Cycling",
+        "Cardio"
+      ],
+      "workoutMinutes": "60"
     }
   ]
 }
