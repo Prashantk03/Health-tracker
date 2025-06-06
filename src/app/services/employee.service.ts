@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private baseUrl = environment.apiUrl;
+  private baseUrl = `${environment.apiUrl}/users`;
 
   constructor(private _http: HttpClient) {}
 
@@ -15,7 +15,7 @@ export class EmployeeService {
     return this._http.post(this.baseUrl, data);
   }
 
-  updateEmployee(id: number, data: any): Observable<any> {
+  updateEmployee(id: string, data: any): Observable<any> {
     return this._http.put(`${this.baseUrl}/${id}`, data);
   }
 
@@ -27,3 +27,4 @@ export class EmployeeService {
     return this._http.delete(`${this.baseUrl}/${id}`);
   }
 }
+
