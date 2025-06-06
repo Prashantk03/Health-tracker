@@ -12,18 +12,18 @@ export class EmployeeService {
   constructor(private _http: HttpClient) {}
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post(`${this.baseUrl}/employees`, data);
+    return this._http.post(`${this.baseUrl}/users`, data);
   }
 
   updateEmployee(id: number, data: any): Observable<any> {
-    return this._http.put(`${this.baseUrl}/employees/${id}`, data);
+    return this._http.put(`${this.baseUrl}/users/${id}`, data);
   }
 
   getEmployeeList(): Observable<any> {
-    return this._http.get(`${this.baseUrl}/employees`);
+    return this._http.get(`${this.baseUrl}/users`);
   }
 
   deleteEmployee(id: number): Observable<any> {
-    return this._http.delete(`${this.baseUrl}/employees/${id}`);
+    return this._http.delete(`${this.baseUrl}/users/${id}`);
   }
 }
