@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
 import { EmployeeService } from '../services/employee.service';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-emp-add-edit',
@@ -26,9 +27,9 @@ export class EmpAddEditComponent implements OnInit {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      userName: '',
-      workoutType: '',
-      workoutMinutes: ''
+      userName: ['', Validators.required],
+      workoutType: ['', Validators.required],
+      workoutMinutes: ['', [Validators.required, Validators.min(1)]]
     });
   }
 

@@ -100,7 +100,7 @@ public single = [];
     }
   }
 
-  deleteEmployee(id: number) {
+  deleteEmployee(id: string) {
     this._empService.deleteEmployee(id).subscribe({
       next: (res) => {
         this._coreService.openSnackBar('User deleted!', 'done');
