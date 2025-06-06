@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private baseUrl = 'http://localhost:5000/api/users';
+  private baseUrl = environment.apiUrl;
 
   constructor(private _http: HttpClient) {}
 
