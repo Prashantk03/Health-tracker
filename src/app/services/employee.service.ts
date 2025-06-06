@@ -12,7 +12,7 @@ export class EmployeeService {
   constructor(private _http: HttpClient) {}
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post(`${this.baseUrl}/users`, data);
+    return this._http.post(`${this.baseUrl}/employees`, data);
   }
 
   updateEmployee(id: number, data: any): Observable<any> {
@@ -20,7 +20,7 @@ export class EmployeeService {
   }
 
   getEmployeeList(): Observable<any> {
-    return this._http.get('${this.baseUrl}/employees');
+    return this._http.get(`${this.baseUrl}/employees`);
   }
 
   deleteEmployee(id: number): Observable<any> {
