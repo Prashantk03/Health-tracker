@@ -20,7 +20,7 @@ export class EmployeeService {
   }
 
   getEmployeeList(): Observable<any> {
-    return this._http.get(`${this.baseUrl}`);
+    return this._http.get(this.baseUrl);
   }
 
   deleteEmployee(id: string): Observable<any> {
