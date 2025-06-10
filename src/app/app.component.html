@@ -30,20 +30,16 @@
         <td mat-cell *matCellDef="let row"> {{row.userName}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="workoutTypeName">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Workouts</th>
-        <td mat-cell *matCellDef="let row"> {{row.workoutType}}</td>
+      <ng-container matColumnDef="workoutType">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Number Of Workouts </th>
+        <td mat-cell *matCellDef="let row"> {{row.workoutType.length}}</td>
       </ng-container>
-
+      
       <ng-container matColumnDef="workoutMinutes">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Workout Minutes </th>
         <td mat-cell *matCellDef="let row"> {{row.workoutMinutes}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="workoutType">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Number Of Workouts </th>
-        <td mat-cell *matCellDef="let row"> {{row.workoutType.length}}</td>
-      </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>

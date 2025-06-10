@@ -15,7 +15,6 @@ import { CoreService } from './core/core.service';
 export class AppComponent implements OnInit {
   displayedColumns: string[] = [
     'userName',
-    'workoutTypeName',
     'workoutType',
     'workoutMinutes',
     'action',
@@ -112,7 +111,7 @@ public single = [];
 
   openEditForm(data: any) {
     const dialogRef = this._dialog.open(EmpAddEditComponent, {
-      data,
+      data,  
     });
 
     dialogRef.afterClosed().subscribe({

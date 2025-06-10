@@ -7,24 +7,24 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private apiUrl = `${environment.apiUrl}/users`;
+  private baseUrl = `${environment.apiUrl}/users`;
 
   constructor(private _http: HttpClient) {}
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post(this.apiUrl, data);
+    return this._http.post(this.baseUrl, data);
   }
 
   updateEmployee(id: string, data: any): Observable<any> {
-    return this._http.put(`${this.apiUrl}/${id}`, data);
+    return this._http.put(`${this.baseUrl}/${id}`, data);
   }
 
   getEmployeeList(): Observable<any> {
-    return this._http.get(this.apiUrl);
+    return this._http.get(this.baseUrl);
   }
 
   deleteEmployee(id: string): Observable<any> {
-    return this._http.delete(`${this.apiUrl}/${id}`);
+    return this._http.delete(`${this.baseUrl}/${id}`);
   }
 }
 
