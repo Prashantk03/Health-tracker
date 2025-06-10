@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private baseUrl = `${environment.apiUrl}/users`;
+  private baseUrl = 'https://health-tracker-backend-lutk.onrender.com/api';
 
   constructor(private _http: HttpClient) {}
 
