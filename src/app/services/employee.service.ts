@@ -7,24 +7,24 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private baseUrl = 'https://health-tracker-backend-lutk.onrender.com/api';
+  private apiUrl = `${environment.apiUrl}/users`;
 
   constructor(private _http: HttpClient) {}
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post(this.baseUrl, data);
+    return this._http.post(this.apiUrl, data);
   }
 
   updateEmployee(id: string, data: any): Observable<any> {
-    return this._http.put(`${this.baseUrl}/${id}`, data);
+    return this._http.put(`${this.apiUrl}/${id}`, data);
   }
 
   getEmployeeList(): Observable<any> {
-    return this._http.get(this.baseUrl);
+    return this._http.get(this.apiUrl);
   }
 
   deleteEmployee(id: string): Observable<any> {
-    return this._http.delete(`${this.baseUrl}/${id}`);
+    return this._http.delete(`${this.apiUrl}/${id}`);
   }
 }
 
