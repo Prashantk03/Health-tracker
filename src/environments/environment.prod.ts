@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://health-tracker-backend-lutk.onrender.com/api'
+  apiUrl: 'https://health-tracker-backend-lutk.onrender.com'
 };
 
